@@ -79,7 +79,7 @@ a {
 }
 
 .section {
-  padding-block: clamp(5rem, 10vw, 9rem);
+  padding-block: clamp(2rem, 5vw, 3rem);
 }
 
 .section__label {
@@ -292,11 +292,11 @@ h2 em {
 
 /* ── HERO ───────────────────────────────────── */
 .hero {
-  min-height: 100svh;
+  min-height: 85svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 80px;
+  padding-top: 40px;
   position: relative;
   overflow: hidden;
 }
@@ -321,14 +321,15 @@ h2 em {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 4rem;
-  padding-block: 4rem;
+  gap: 2rem;
+  padding-block: 2rem;
 }
 
 .hero__text {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  padding-top: 10px;
 }
 
 .hero__eyebrow {
@@ -443,7 +444,7 @@ h2 em {
 /* Scroll indicator */
 .hero__scroll {
   position: absolute;
-  bottom: 2.5rem;
+  bottom: 1.5rem;
   left: var(--side-pad);
   display: flex;
   align-items: center;
@@ -868,7 +869,7 @@ h2 em {
   /* Hero */
   .hero__inner {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 1.5rem;
     text-align: center;
     padding-top: 2rem;
   }
@@ -925,6 +926,7 @@ h2 em {
   .contact__links {
     flex-direction: column;
     align-items: flex-start;
+    margin: 0 auto;
   }
 
   .contact__link {
