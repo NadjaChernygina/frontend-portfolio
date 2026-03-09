@@ -7,11 +7,11 @@
 "use strict";
 
 /* ── DOM REFS ───────────────────────────────── */
-const header    = document.getElementById("site-header");
+const header = document.getElementById("site-header");
 const navToggle = document.getElementById("nav-toggle");
-const navMenu   = document.getElementById("nav-menu");
-const navLinks  = document.querySelectorAll(".nav__link");
-const yearEl    = document.getElementById("year");
+const navMenu = document.getElementById("nav-menu");
+const navLinks = document.querySelectorAll(".nav__link");
+const yearEl = document.getElementById("year");
 
 /* ── FOOTER YEAR ────────────────────────────── */
 if (yearEl) {
@@ -100,7 +100,9 @@ const revealObserver = new IntersectionObserver(
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
         // Stagger siblings within the same parent
-        const siblings = entry.target.parentElement.querySelectorAll(".reveal:not(.is-visible)");
+        const siblings = entry.target.parentElement.querySelectorAll(
+          ".reveal:not(.is-visible)",
+        );
         siblings.forEach((el, idx) => {
           // Only stagger if this element is among those in view
           if (el === entry.target) {
@@ -115,7 +117,7 @@ const revealObserver = new IntersectionObserver(
   {
     threshold: 0.12,
     rootMargin: "0px 0px -40px 0px",
-  }
+  },
 );
 
 document.querySelectorAll(".reveal").forEach((el) => {
@@ -140,7 +142,7 @@ const staggerObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.05 }
+  { threshold: 0.05 },
 );
 
 document.querySelectorAll(".skills__grid, .projects__grid").forEach((grid) => {
@@ -160,4 +162,3 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     window.scrollTo({ top, behavior: "smooth" });
   });
 });
-```__
