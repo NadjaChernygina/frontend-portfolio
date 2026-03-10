@@ -853,6 +853,7 @@ h2 em {
 
   .nav__list.is-open {
     transform: translateY(0);
+    top: 68px;
   }
 
   .nav__list li {
